@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Ambujatest {
 
-	public static void main(String[] args) throws InterruptedException, Exception {
+	public static void main(String args[]) throws InterruptedException, Exception {
 		
 		
 		
@@ -32,7 +32,7 @@ public class Ambujatest {
 		sour = ts.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium1.png"));
 		
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		
 		
 		driver.findElement(By.id("userName")).sendKeys("ashish_tpv");
