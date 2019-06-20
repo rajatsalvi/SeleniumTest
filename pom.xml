@@ -28,7 +28,8 @@
      <configuration>  
       <mainClass>test.Ambujatest</mainClass>  
      </configuration>  
-    </execution>  
+    </execution>
+     
    </executions> 
    </plugin>
       
