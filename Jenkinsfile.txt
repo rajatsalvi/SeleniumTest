@@ -12,9 +12,11 @@ pipeline {
             }
         }
         stage('Sonar test') { 
+          steps{
         withSonarQubeEnv('Sonarqube') { 
                 bat 'sonar-scanner -D"sonar.login=7a369097079fdbe135e4c9158a7711225134d275"' 
-            } 
+                 } 
+             }
         }
         stage('Deploy') { 
             steps {
