@@ -61,7 +61,7 @@ public class Ambujatest {
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium4.png"));
 				
 				
-				driver.findElement(By.xpath("/html/body/my-app/menubar/p-dialog[3]/div/div[2]/div/button[2]")).click();
+				driver.findElement(By.xpath("/html/body/my-app/menubar/p-dialog[3]/div/div[2]/div/div/button[2]")).click();
 				
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium5.png"));
