@@ -10,7 +10,7 @@ pipeline {
             steps {
             bat "mvn test"
             }
-        
+        }
         stage('JUnit Test Result'){
             steps {
             bat "C:\\Program Files (x86)\\Jenkins\\workspace\\PipelineDemoProject\\SeleniumTest\\target\\*.xml"    
