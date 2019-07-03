@@ -14,7 +14,7 @@ pipeline {
         stage('Sonar test') { 
           steps{
         withSonarQubeEnv('Sonarqube') { 
-                bat 'sonar-scanner -D"sonar.login=7a369097079fdbe135e4c9158a7711225134d275"' 
+                bat 'sonar-scanner -D"sonar.login=68ac2fe343b0a59e1b30f91a9394c8d2fd588efc"' 
                  } 
              }
         }
