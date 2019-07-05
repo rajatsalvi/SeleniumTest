@@ -24,7 +24,9 @@
    <executions> 
      
     <execution>  
-     <phase>test</phase>  
+      
+     <phase>test</phase>
+      
      <goals>  
       <goal>java</goal>  
      </goals>  
