@@ -17,7 +17,7 @@ public class Ambujatest {
 		
 		
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\hemant\\Downloads\\New folder/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\SeleniumDriver/chromedriver.exe");
 		
 		WebDriver driver = new ChromeDriver();
 		
