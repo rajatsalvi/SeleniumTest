@@ -52,10 +52,10 @@ public class Ambujatest {
 		Thread.sleep(5000);
 		
 	
-			if(driver.findElement(By.xpath("/html/body/my-app/menubar/p-dialog[3]/div")).isDisplayed() )                                                                                                         
+			/*if(driver.findElement(By.xpath("/html/body/my-app/menubar/p-dialog[3]/div")).isDisplayed() )                                                                                                         
 			{         
 				Thread.sleep(5000);
-			  /**Do this*/     
+			  //Do this     
 				
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium4.png"));
@@ -122,7 +122,7 @@ public class Ambujatest {
 			}			
 			else    
 			{     
-			  /**Do this*/   
+			  //Do this   
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium4.png"));
 				
@@ -138,7 +138,7 @@ public class Ambujatest {
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium6.png"));
 				
-			}
+			}*/
 			
 			
 			
