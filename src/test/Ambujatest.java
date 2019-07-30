@@ -54,7 +54,7 @@ public class Ambujatest {
 	
 			if(driver.findElement(By.xpath("/html/body/my-app/menubar/p-dialog[3]/div")).isDisplayed() )                                                                                                         
 			{         
-				driver.manage().timeouts().implicitlyWait(2,TimeUnit.SECONDS);
+				Thread.sleep(5000);
 			  /**Do this*/     
 				
 				sour = ts.getScreenshotAs(OutputType.FILE);
