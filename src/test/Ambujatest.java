@@ -1,7 +1,7 @@
 package test;
 
 import java.io.File;
-import java.io.IOException;
+
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -22,6 +22,8 @@ public class Ambujatest {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\hemant\\Downloads\\New folder/chromedriver.exe");
 		
 		WebDriver driver = new ChromeDriver();
+		
+		driver.manage().window().maximize();
 		
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		
