@@ -8,18 +8,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 public class Ambujatest {
 
-	public static void main(String args[]) throws InterruptedException, Exception {
+	public static void main(String args[]) throws Exception {
 		
 		
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\hemant\\Downloads\\New folder/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\SeleniumDriver/chromedriver.exe");
 		
 		WebDriver driver = new ChromeDriver();
 		
@@ -36,7 +35,7 @@ public class Ambujatest {
 		sour = ts.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium1.png"));
 		
-		Thread.sleep(8000);
+		Thread.sleep(15000);
 				
 		driver.findElement(By.id("userName")).sendKeys("ashish_tpv");
 		
@@ -48,25 +47,26 @@ public class Ambujatest {
 		sour = ts.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium3.png"));
 		
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+		Thread.sleep(2000);
 		
-		WebElement el = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[class='btn btn_login2']")));
-		el.click();
+		//WebDriverWait wait = new WebDriverWait(driver, 10);
+		
+		driver.findElement(By.cssSelector("button[class='btn btn_login2']")).click();
+		
 		
 		Thread.sleep(8000);
 		
 	
 			if(driver.findElement(By.xpath("/html/body/my-app/menubar/p-dialog[3]/div")).isDisplayed())                                                                                                         
 			{         
-				Thread.sleep(5000);
+				
 			  /**Do this*/     
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium4.png"));
 				
-				WebElement le = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[class='btn btn_searchSmall_add']")));
-                le.click();
+				driver.findElement(By.cssSelector("button[class='btn btn_searchSmall_add']")).click();
 				
-				/*driver.findElement(By.cssSelector("button[class='btn btn_searchSmall_add']")).click();*/
+				
 				
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium5.png"));
@@ -74,8 +74,8 @@ public class Ambujatest {
 				Thread.sleep(5000);
 				
 				
-				driver.findElement(By.xpath("/html/body/my-app/menubar/div[1]/div/div[4]/div/a/span/i")).click();
-				
+				//driver.findElement(By.xpath("/html/body/my-app/menubar/div[1]/div/div[4]/div/a/span/i")).click();
+				driver.findElement(By.cssSelector("i[class='fa fa-caret-down fa-lg']")).click();
 				
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium6.png"));
@@ -88,26 +88,26 @@ public class Ambujatest {
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium7.png"));
 				
 			}  
-			else if(driver.findElement(By.xpath("/html/body/my-app/dashboard/div[1]/div[2]/div")).isDisplayed()) {
+			else if(driver.findElement(By.cssSelector("div[class='modal-content']")).isDisplayed()) {
 				
 				Thread.sleep(5000);
 				
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium4.png"));
 				
-				WebElement al = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[class='btn btn_searchSmall']")));
-                al.click();
+
 				
-				/*driver.findElement(By.cssSelector("button[class='btn btn_searchSmall']")).click();*/
+				
+				
+				driver.findElement(By.cssSelector("button[class='btn btn_searchSmall']")).click();
 				
 				Thread.sleep(5000);
 				
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium5.png"));
 				
-				WebElement il = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[class='btn btn_searchSmall_add']")));
-                il.click();
-				/*driver.findElement(By.cssSelector("button[class='btn btn_searchSmall_add']")).click();*/
+
+				driver.findElement(By.cssSelector("button[class='btn btn_searchSmall_add']")).click();
 				
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium5.png"));
@@ -115,7 +115,7 @@ public class Ambujatest {
 				Thread.sleep(5000);
 				
 				
-				driver.findElement(By.xpath("/html/body/my-app/menubar/div[1]/div/div[4]/div/a/span/i")).click();
+				driver.findElement(By.cssSelector("i[class='fa fa-caret-down fa-lg']")).click();
 				
 				
 				sour = ts.getScreenshotAs(OutputType.FILE);
@@ -134,7 +134,7 @@ public class Ambujatest {
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium4.png"));
 				
-				driver.findElement(By.xpath("/html/body/my-app/menubar/div[1]/div/div[4]/div/a/span/i")).click();
+				driver.findElement(By.cssSelector("i[class='fa fa-caret-down fa-lg']")).click();
 				
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium5.png"));
