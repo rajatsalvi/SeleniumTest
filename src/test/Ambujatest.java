@@ -10,6 +10,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Ambujatest {
 
@@ -33,41 +35,41 @@ public class Ambujatest {
 		FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium1.png"));
 		
 		Thread.sleep(8000);
-		
-		
+				
 		driver.findElement(By.id("userName")).sendKeys("ashish_tpv");
-		sour = ts.getScreenshotAs(OutputType.FILE);
 		
+		sour = ts.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium2.png"));
 		
 		driver.findElement(By.id("userPassword")).sendKeys("Test123#");
-		sour = ts.getScreenshotAs(OutputType.FILE);
 		
+		sour = ts.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium3.png"));
 		
-		Thread.sleep(3000);
+		WebDriverWait wait = new WebDriverWait(driver, 10);
 		
-		driver.findElement(By.xpath("/html/body/my-app/ng-component/div/div[2]/div[2]/div/form/ul/li[3]/button[1]")).click();
+		WebElement el = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[class='btn btn_login2']")));
+		el.click();
 		
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		
 	
-			/*if(driver.findElement(By.xpath("/html/body/my-app/menubar/p-dialog[3]/div")).isDisplayed() )                                                                                                         
+			if(driver.findElement(By.xpath("/html/body/my-app/menubar/p-dialog[3]/div")).isDisplayed())                                                                                                         
 			{         
 				Thread.sleep(5000);
-			  //Do this     
-				
+			  /**Do this*/     
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium4.png"));
 				
+				WebElement le = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[class='btn btn_searchSmall_add']")));
+                le.click();
 				
-				//driver.findElement(By.xpath("/html/body/my-app/menubar/p-dialog[3]/div/div[2]/div/div/button[2]")).click();
-				driver.findElement(By.cssSelector("button[class='btn btn_searchSmall_add']")).click();
+				/*driver.findElement(By.cssSelector("button[class='btn btn_searchSmall_add']")).click();*/
 				
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium5.png"));
 				
-				Thread.sleep(2000);
+				Thread.sleep(5000);
 				
 				
 				driver.findElement(By.xpath("/html/body/my-app/menubar/div[1]/div/div[4]/div/a/span/i")).click();
@@ -76,35 +78,39 @@ public class Ambujatest {
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium6.png"));
 				
-				Thread.sleep(2000);
+				Thread.sleep(5000);
 				
 				driver.findElement(By.xpath("/html/body/my-app/menubar/div[1]/div/div[4]/div/ul/li[3]/a")).click();
 				
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium7.png"));
 				
-			} 
-            else if(driver.findElement(By.xpath("/html/body/my-app/dashboard/div[1]/div[2]/div")).isDisplayed()) {
+			}  
+			else if(driver.findElement(By.xpath("/html/body/my-app/dashboard/div[1]/div[2]/div")).isDisplayed()) {
 				
-				Thread.sleep(2000);
+				Thread.sleep(5000);
 				
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium4.png"));
 				
-				driver.findElement(By.xpath("/html/body/my-app/dashboard/div[1]/div[2]/div/div[3]/button")).click();
+				WebElement al = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[class='btn btn_searchSmall']")));
+                al.click();
 				
-				Thread.sleep(4000);
+				/*driver.findElement(By.cssSelector("button[class='btn btn_searchSmall']")).click();*/
 				
-				sour = ts.getScreenshotAs(OutputType.FILE);
-				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium5.png"));
-				
-				//driver.findElement(By.xpath("/html/body/my-app/menubar/p-dialog[3]/div/div[2]/div/div/button[2]")).click();
-				driver.findElement(By.cssSelector("button[class='btn btn_searchSmall_add']")).click();
+				Thread.sleep(5000);
 				
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium5.png"));
 				
-				Thread.sleep(2000);
+				WebElement il = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[class='btn btn_searchSmall_add']")));
+                il.click();
+				/*driver.findElement(By.cssSelector("button[class='btn btn_searchSmall_add']")).click();*/
+				
+				sour = ts.getScreenshotAs(OutputType.FILE);
+				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium5.png"));
+				
+				Thread.sleep(5000);
 				
 				
 				driver.findElement(By.xpath("/html/body/my-app/menubar/div[1]/div/div[4]/div/a/span/i")).click();
@@ -113,16 +119,16 @@ public class Ambujatest {
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium6.png"));
 				
-				Thread.sleep(2000);
+				Thread.sleep(5000);
 				
 				driver.findElement(By.xpath("/html/body/my-app/menubar/div[1]/div/div[4]/div/ul/li[3]/a")).click();
 				
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium7.png"));
-			}			
+			}
 			else    
 			{     
-			  //Do this   
+			  /**Do this*/   
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium4.png"));
 				
@@ -131,14 +137,14 @@ public class Ambujatest {
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium5.png"));
 				
-				Thread.sleep(2000);
+				Thread.sleep(5000);
 				
 				driver.findElement(By.xpath("/html/body/my-app/menubar/div[1]/div/div[4]/div/ul/li[3]/a")).click();
 				
 				sour = ts.getScreenshotAs(OutputType.FILE);
 				FileUtils.copyFile(sour, new File("C:\\SeleniumScreenshot/Selenium6.png"));
 				
-			}*/
+			}
 			
 			
 			
