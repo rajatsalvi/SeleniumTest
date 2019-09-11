@@ -1,7 +1,12 @@
 pipeline {
     agent any 
     stages {
-        stage('clone repo and clean') { 
+        stage('clean workspace'){
+          steps{
+            cleanWs()
+            }
+        }
+        /*stage('clone repo and clean') { 
             steps {
             bat "mvn clean"
             }
@@ -22,6 +27,6 @@ pipeline {
             steps {
             bat "mvn clean package"
             }
-        }
+        }*/
     }
 }
